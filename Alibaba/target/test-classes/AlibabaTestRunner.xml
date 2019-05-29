@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Alibaba Automation Script" parallel="false">
+
+    <parameter name="useCloudEnv" value="false"/>
+    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
+    <!--<parameter name="os" value="OS X"/>-->
+    <!--<parameter name="os_version" value="Sierra"/>-->
+    <!--<parameter name="browserName" value="firefox"/>-->
+    <!--<parameter name="browserVersion" value="74.0"/>-->
+
+    <parameter name="os" value="Windows"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="filePath" value=".\src\test\resources\locator.properties"/>
+    <parameter name="locatorFilePath" value="\src\test\resources\locator.properties"/>
+    <parameter name="secretPath" value=".\databaseinfo\secret.properties"/>
+    <parameter name="excelPath" value="\src\test\resources\excel.properties"/>
+    <parameter name="mysqlPath" value=".\src\test\resources\mysql.properties"/>
+    <parameter name="screenshotFilePath" value=".\screenshoot\"/>
+    <parameter name="xlsxFilePath" value=".\data\ali.xlsx"/>
+    <parameter name="secretMySqlPath" value=".\databaseinfo\secret.properties"/>
+    <parameter name="user" value="yilisww@163.com"/>
+    <parameter name="password" value="gotO123456"/>
+    <parameter name="sheetId" value="Alibaba"/>
+    <parameter name="dataRange" value="Alibaba!A2:A6"/>
+    <parameter name="url" value="http://www.alibaba.com/"/>
+
+    <test name="Alibaba Home">
+        <classes>
+            <class name="alitests.TestSearch"></class>
+            <class name="alitests.TestSignUp"/>
+            <class name="alitests.TestSignIn"/>
+        </classes>
+    </test>
+</suite>

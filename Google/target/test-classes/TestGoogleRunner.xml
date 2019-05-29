@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Google Automation Script " parallel="false">
+
+    <!--<parameter name="useCloudEnv" value="false"/>-->
+    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
+
+    <!--<parameter name="os_version" value="Sierra"/>-->
+    <parameter name="browserName" value="chrome"/>
+    <!--<parameter name="browserVersion" value="74.0"/>-->
+    <parameter name="chromedriverpath" value="../Generic/driver/chromedriver.exe"/>
+    <parameter name="url" value="https://www.google.com"/>
+    <parameter name="filePath" value="../Alibaba/src/test/resources/locator.properties"/>
+    <parameter name="locatorFilePath" value="../Alibaba/src/test/resources/locator.properties"/>
+
+    <parameter name="os" value="Windows"/>
+
+    <test name = "Google Home">
+        <classes>
+            <class name="TestGoogle.TestGoogleSearchImages"></class>
+            <class name="TestGoogle.TestGoogleSearch"></class>
+            <class name="TestGoogle.TestGmail"/>
+        </classes>
+    </test>
+
+</suite>
