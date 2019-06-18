@@ -9,7 +9,7 @@
     <!--<parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <!--<parameter name="browserVersion" value="74.0"/>-->
-    <parameter name="chromedriverpath" value="../Generic/driver/chromedriver74.exe"/>
+    <parameter name="chromedriverpath" value="../Generic/driver/chromedriver.exe"/>
     <parameter name="url" value="https://www.amazon.com"/>
     <parameter name="filePath" value="../Alibaba/src/test/resources/locator.properties"/>
     <parameter name="locatorFilePath" value="../Alibaba/src/test/resources/locator.properties"/>
@@ -22,7 +22,8 @@
 
     <test name = "Amazon Home">
         <classes>
-            <class name="menu.TestDropDownMenu"/>
+            <class name="menu.TestAccountLogin"></class>
+            <!--<class name="menu.TestDropDownMenu"/>-->
             <class name="menu.TestSearch"/>
         </classes>
     </test>
